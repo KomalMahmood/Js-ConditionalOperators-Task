@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+<style>
+
+p
+{
+	font-weight:600;
+}
+
+#a1
+{
+width:50%;
+height:500px;
+float:left;	
+background-image:url(black-dice-black-background-wallpaper-46034828.jpg);
+background-size:cover;
+color:#FFFFFF;
+font-family:Merienda One;
+
+}
+
+#result1
+{
+color:#FFFFFF;	
+	
+}
+
+#a2
+{
+width:50%;
+height:500px;
+float:right;	
+background-image:url(numbers_border.jpg);
+background-size:cover;
+font-family:Merienda One;
+font-size:18x;
+
+}
+
+#result2
+{
+color:#000000;
+	
+}
+
+#a3
+{
+width:50%;
+height:500px;
+float:left;	
+background-image:url(img_mouseover3.jpg);
+background-size:cover;
+color:#8A3335;
+font-family:Arial;
+
+}
+
+#result3
+{
+color#8A3335;	
+	
+}
+
+#a4
+{
+width:50%;
+height:500px;
+float:right;	
+background-image:url(rainbow_basic_stripe_grid_fix_shop_preview.png);
+background-size:cover;
+color:#32004B;
+font-family:Merienda One;
+}
+
+#result4
+{
+color:#FFFFFF;	
+	
+}
+
+label
+{
+	
+	font-weight:700;
+	font-size:18px;
+}
+
+button , #button1 , #button2
+{
+	
+	
+	font-weight:bold;
+
+	width:80px;
+	height:40px;
+	margin:12px;
+	box-shadow:10px 10px 10px #A6A6A6;
+	border:2px solid #FFFFFF;
+	border-radius:5px;
+}
+button
+{
+	color:#FFFFFF;
+	background-color:#000000;
+}
+
+#button1
+{
+	color:#FFFFFF;
+	background-color:#8A3335;
+}
+
+#button2
+{
+	color:#32004B;
+    background-color:#E4E4E4;
+	font-weight:800;
+	font-size:15px;
+}
+
+form
+{
+	padding:10px 0px 0px 80px;
+
+	
+}
+#form1
+{
+	padding:80px 0px 0px 100px;
+	
+}
+#table1
+{
+	padding:0px 0px 0px 50px;
+	
+}
+
+#form2
+{
+	padding:20px 0px 0px 50px;
+	
+}
+
+td
+{
+height:30px;	
+	
+}
+
+#main2
+{
+	
+	width:50%;
+	height:200px;
+	margin-left:100px;
+		
+}
+
+
+#d1
+{
+	
+	height:100px;
+	width:50%;
+	border-right:3px solid black;
+	float:left;
+
+}
+
+#d2
+{
+	
+	height:100px;
+	width:49%;
+	border-bottom:3px solid black;
+	float:right;
+
+	
+}
+#d3
+{
+	height:100px;
+	width:50%;
+	border-top:3px solid black;
+	float:left;
+	
+}
+#d4
+{
+	height:100px;
+	width:49%;
+	border-left:3px solid black;
+	float:right;
+}
+</style>
+
+<script>
+function show1()
+{
+	var num;
+	num=parseInt(document.getElementById("n1").value);
+    if(num%2==0)
+	{
+		document.getElementById("result1").innerHTML ="The number is even";
+	}
+	else
+	{
+		document.getElementById("result1").innerHTML ="The number is odd";
+		
+	}
+	
+	
+}
+
+function show2()
+{
+	var n;
+	n=parseInt(document.getElementById("num1").value);
+    if(n>=0)
+	{
+		document.getElementById("result2").innerHTML ="The number is positive";
+	}
+	else
+	{
+		document.getElementById("result2").innerHTML ="The number is negative";
+		
+	}
+	
+	
+}
+
+
+
+function show3()
+{
+	var number;
+	number=parseInt(document.getElementById("number").value);
+    if(number>=18)
+	{
+		document.getElementById("result3").innerHTML ="You are eligible for voting!!!";
+	}
+	else
+	{
+		document.getElementById("result3").innerHTML ="You are not eligible for voting!!!";
+		
+	}
+	
+	
+}
+
+function show4()
+{
+	var num1,num2;
+	num1=parseInt(document.getElementById("number1").value);
+	num2=parseInt(document.getElementById("number2").value);
+    if((num1>=0) && (num2>=0))
+	{
+		document.getElementById("co1").innerHTML ="("+num1+","+num2+")";
+	}
+	else if((num1<0) && (num2>=0))
+	{
+		document.getElementById("co2").innerHTML ="("+num1+","+num2+")";
+		
+	}
+	else if((num1<0) && (num2<0))
+	{
+		document.getElementById("co3").innerHTML ="("+num1+","+num2+")";
+		
+	}
+	else
+	{
+		document.getElementById("co4").innerHTML ="("+num1+","+num2+")";
+	}
+	
+	
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<div id="a1">
+<form>
+
+<h1 style="font-family:Kaushan Script;">Even OR odd</h1>
+<br>
+
+
+<label>Enter a number:</label>
+<br><br>
+<input type="text" id="n1" />
+<br><br>
+
+<button onclick="show1();">Even/Odd</button>
+<p id="result1"></p>
+</form>
+
+</div>
+
+
+<div id="a2">
+<form>
+<h1>Postive OR negative</h1>
+<br>
+
+
+<label>Enter a number:</label>
+<br>
+<input type="text" id="num1" />
+
+<button onclick="show2();">+ OR -</button>
+<p id="result2"></p>
+</form>
+
+</div>
+
+
+<div id="a3">
+<form id="form1">
+<h1 style="font-size:40px;">Vote Casting</h1>
+<br>
+
+
+<label style="font-size:20px;">Enter your age:</label>
+<br><br>
+<input type="text" id="number" />
+<br>
+<br>
+<button id="button1" onclick="show3();">Show</button>
+<p id="result3"></p>
+</form>
+
+</div>
+
+
+<div id="a4">
+
+<form id="form2">
+
+
+<div id="main2">
+
+<div id="d1" class="end">
+<p align="center" style="vertical-align:middle;" id="co2"></p>
+</div>
+
+<div id="d2" class="start">
+<p align="center" style="vertical-align:middle;" id="co1"></p>
+</div>
+
+<div id="d3" class="start">
+<p align="center" style="vertical-align:middle;" id="co3"></p>
+</div>
+
+<div id="d4" class="end">
+<p align="center" style="vertical-align:middle;" id="co4"></p>
+</div>
+
+</div>
+
+
+<table id="table1">
+<tr>
+<td colspan="2"><h1>Coordinate System</h1></td>
+</tr>
+
+<tr height="20">
+<td><label>Enter 1st value:</label></td>
+<td><input type="text" id="number1" /></td>
+</tr>
+<br><br>
+<tr>
+<td><label>Enter 2nd value:</label></td>
+<td><input type="text" id="number2" /></td>
+</tr>
+
+<tr>
+<td colspan="2"><button id="button2" onclick="show4();">Display</button></td>
+</tr>
+
+</table>
+<p style="color:#000000;" id="result4"></p>
+
+
+</form>
+
+</div>
+
+
+
+
+
+</body>
+</html>
